@@ -9,13 +9,11 @@ on:
   pull_request:
     branches: [master]
     
-
 jobs:
   build:
 
     runs-on: ubuntu-latest
     
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -24,7 +22,6 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
        
-
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
